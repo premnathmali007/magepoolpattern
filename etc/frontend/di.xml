@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * di.xml
+ *
+ * @module Codilar_PoolPattern
+ * @description Demonstration of Pool Pattern
+ * @author    <premnath.m@codilar.com>
+ * @link     https://www.codilar.com
+ * @copyright Copyright © 2020 NexPWA Pvt. Ltd.. All rights reserved
+ *
+ * Pool Pattern Example
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="codilar_checkout_config_provider" xsi:type="object">Codilar\PoolPattern\Model\ConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
